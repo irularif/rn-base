@@ -1,10 +1,12 @@
-import Theme from "libs/config/theme";
+import useTheme from "libs/hooks/useTheme";
 import { Image, Screen, Spinner, Text, View } from "libs/ui";
 import React from "react";
 import { Dimensions } from "react-native";
 
 export default () => {
   const dim = Dimensions.get("window");
+  const Theme = useTheme();
+
   return (
     <Screen
       style={{
@@ -37,7 +39,7 @@ export default () => {
           style={{
             alignSelf: "center",
           }}
-          color={Theme.UIColors.primary}
+          color={Theme.colors.primary}
         ></Spinner>
         <Text>User Screen</Text>
       </View>

@@ -1,6 +1,6 @@
 import { Model } from "libs/model/model";
 
-export class Dashboard<T extends Model = any> extends Model<T> {
+export class Dashboard extends Model {
   loading = false;
 
   async load() {}

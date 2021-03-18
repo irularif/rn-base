@@ -8,9 +8,9 @@
     "test": "jest",
     "gradlew": "npx jetify && cd android && ./gradlew clean",
     "build": "cd android && ./gradlew bundleRelease",
-    "build:apk": "./gradlew assembleRelease --warning-mode all",
-    "publish:prod": "appcenter codepush release-react -a ksatu/rn-base -d Production",
-    "publish:dev": "appcenter codepush release-react -a ksatu/rn-base -d Production"
+    "build:apk": "cd android && ./gradlew assembleRelease --warning-mode all",
+    "publish:prod": "appcenter codepush release-react -a irularif/rn-base -d Production",
+    "publish:dev": "appcenter codepush release-react -a irularif/rn-base -d Production"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.2",
@@ -28,6 +28,7 @@
     "expo": "~40.0.0",
     "expo-barcode-scanner": "~9.1.0",
     "expo-camera": "~9.1.0",
+    "expo-document-picker": "^9.0.1",
     "expo-font": "~8.4.0",
     "expo-image-manipulator": "~8.4.0",
     "expo-image-picker": "~9.2.0",
@@ -41,6 +42,7 @@
     "lodash.isplainobject": "^4.0.6",
     "lodash.set": "^4.3.2",
     "lottie-react-native": "^3.5.0",
+    "lz-string": "^1.4.4",
     "mime-types": "^2.1.28",
     "mobx": "^6.0.4",
     "mobx-react": "^7.0.5",
@@ -48,6 +50,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "~0.63.4",
+    "react-native-aes-crypto": "^1.3.10",
     "react-native-code-push": "^6.4.1",
     "react-native-device-info": "^7.3.1",
     "react-native-fast-image": "^8.3.4",

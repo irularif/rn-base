@@ -1,12 +1,13 @@
-import Theme from "libs/config/theme";
 import { Image, Screen, Spinner, TopBar, View, WebView } from "libs/ui";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import get from "lodash.get";
 import { observer } from "mobx-react";
 import React from "react";
 import { Dimensions } from "react-native";
+import useTheme from "libs/hooks/useTheme";
 
 export default observer(() => {
+  const Theme = useTheme();
   const dim = Dimensions.get("window");
   const nav = useNavigation();
   const route = useRoute();
@@ -80,7 +81,7 @@ export default observer(() => {
                 style={{
                   alignSelf: "center",
                 }}
-                color={Theme.UIColors.primary}
+                color={Theme.colors.primary}
               ></Spinner>
             </View>
           );

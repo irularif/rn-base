@@ -1,4 +1,3 @@
-import Theme from "libs/config/theme";
 import { Image, Screen, Spinner, Text, View } from "libs/ui";
 import React from "react";
 import { Dimensions } from "react-native";
@@ -31,7 +30,7 @@ export default (props: any) => {
         type={"View"}
       >
         <Image
-          source={Theme.UISplashScreen}
+          source={require("app/assets/images/splash.png")}
           style={{
             width: dim.width,
             height: dim.width,
@@ -56,7 +55,7 @@ export default (props: any) => {
                 marginBottom: 15,
               }}
             >
-              <Spinner color={Theme.UIColors.primary}></Spinner>
+              <Spinner color={"#2A824F"}></Spinner>
 
               <Text
                 style={{

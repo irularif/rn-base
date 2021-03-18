@@ -1,10 +1,11 @@
 import { Model } from "libs/model/model";
 
-export class Global<T extends Model = any> extends Model<T> {
+export class Global extends Model {
   menuList: any[] = [];
   activeMenu = {
     label: "",
     path: "",
+    icon: {},
   };
   expandMenu: boolean = false;
 }

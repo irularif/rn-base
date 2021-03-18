@@ -3,9 +3,9 @@ import { Model } from "libs/model/model";
 import { Alert } from "react-native";
 import GlobalStore, { Global } from "./global";
 
-export class User<T extends Model = any> extends Model<T> {
+export class User extends Model {
   id = null;
-  nama = null;
+  name = null;
 }
 
 export class Form extends User {
@@ -15,13 +15,13 @@ export class Form extends User {
     return true;
   }
 }
-export class Role<T extends Model = any> extends Model<T> {
+export class Role extends Model {
   id = null;
   role_name = "";
   role_desc = "";
 }
 
-export class Session<T extends Model = any> extends Model<T> {
+export class Session extends Model {
   // required data
   isLoggedIn = false;
 
@@ -37,8 +37,8 @@ export class Session<T extends Model = any> extends Model<T> {
   };
   expired = null;
 
-  username = "";
-  password = "";
+  username = "user";
+  password = "12345";
   loading = false;
   saveUserPass = false;
 
@@ -143,7 +143,6 @@ export class Session<T extends Model = any> extends Model<T> {
     }
   }
 
-  // optional func
   init() {
     let old = {
       username: this.username,
@@ -157,6 +156,20 @@ export class Session<T extends Model = any> extends Model<T> {
   initForm() {
     this._loadJSON({
       form: this.user._json,
+    });
+  }
+
+  exampleLogin() {
+    this._loadJSON({
+      isLoggedIn: true,
+      user: {
+        name: "Example",
+      },
+      role: {
+        id: 1,
+        role_name: "",
+        role_desc: "",
+      },
     });
   }
 }

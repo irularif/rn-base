@@ -64,7 +64,7 @@ export default observer(({ state }: any) => {
 
   return (
     <Screen>
-      <TopBar backButton title="Data Siswa" />
+      <TopBar backButton title="Profile" />
       <ScrollView>
         <View
           style={{
@@ -87,7 +87,7 @@ export default observer(({ state }: any) => {
                     flex: 1,
                   }}
                 >
-                  <Field initializeField={props} label="Nama *" path="nama">
+                  <Field initializeField={props} label="Nama *" path="name">
                     <TextInput type="text" />
                   </Field>
                   <Field

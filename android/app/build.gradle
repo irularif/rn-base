@@ -84,7 +84,6 @@ project.ext.react = [
 apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 apply from: "../../node_modules/react-native/react.gradle"
 apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
-apply from: "../../node_modules/expo-updates/scripts/create-manifest-android.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -160,7 +159,7 @@ android {
             keyPassword 'android'
         }
         release {
-            if (project.hasProperty('APP_PROD_STORE_FILE')) {
+            if (project.hasProperty('APP_PROD_STORE_FILE') && APP_PROD_STORE_PASSWORD) {
                 def exist = file(APP_PROD_STORE_FILE).exists()
                 if (exist) {
                     storeFile file(APP_PROD_STORE_FILE)

@@ -59,7 +59,7 @@ export default observer(() => {
               marginBottom: 10,
             }}
           >
-            {SessionStore.user.nama}
+            {SessionStore.user.name}
           </Text>
         </View>
         <Button

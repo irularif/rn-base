@@ -1,13 +1,15 @@
 import SessionStore from "app/model/session";
 import Fonts from "libs/assets/fonts";
-import Theme from "libs/config/theme";
+import useTheme from "libs/hooks/useTheme";
 import { Image, Text, View } from "libs/ui";
 import { observer } from "mobx-react";
 import React from "react";
 import { Dimensions } from "react-native";
 
 export default observer(() => {
+  const Theme = useTheme();
   const dim = Dimensions.get("window");
+
   return (
     <View
       style={{
@@ -32,7 +34,7 @@ export default observer(() => {
               marginHorizontal: 10,
               fontSize: 22,
               fontFamily: Fonts.NunitoBold,
-              color: Theme.UIColors.primary,
+              color: Theme.colors.primary,
             }}
           >
             Hai, {SessionStore.user.nama}

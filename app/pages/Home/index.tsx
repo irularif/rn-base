@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Screen } from "libs/ui";
 import { observer } from "mobx-react";
 import React from "react";
-import Tab from "app/ui/home/Tab";
+import Tab from "app/pages/Home/Tab";
 import { TabInitialStack, TabRoutes } from "app/routes/tabs";
 import { IRoute } from "libs/routes";
 import { ITheme } from "libs/config/theme";

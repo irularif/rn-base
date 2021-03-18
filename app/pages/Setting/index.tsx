@@ -1,26 +1,28 @@
-import codePushOptions from "libs/config/code-push";
-import Theme from "libs/config/theme";
-import { Button, Icon, Screen, ScrollView, Text, View } from "libs/ui";
-import { IIcon } from "libs/ui/Icon";
 import { useNavigation } from "@react-navigation/native";
 import config from "app/config/app";
 import SessionStore from "app/model/session";
+import Header from "app/pages/Setting/Header";
+import TopBar from "app/ui/utils/TopBar";
+import codePushOptions from "libs/config/code-push";
+import useTheme from "libs/hooks/useTheme";
+import { Button, Icon, Screen, ScrollView, Text, View } from "libs/ui";
+import { IIcon } from "libs/ui/Icon";
 import { action, runInAction } from "mobx";
 import { observer, useLocalObservable } from "mobx-react";
 import React from "react";
 import codePush from "react-native-code-push";
-import Update from "../ui/setting/Update";
 import DeviceInfo from "react-native-device-info";
-import TopBar from "app/ui/utils/TopBar";
-import Header from "app/ui/setting/Header";
+import Update from "./Update";
 
 export default observer(() => {
+  const Theme = useTheme();
   const nav = useNavigation();
   const meta = useLocalObservable(() => ({
     update: false,
     checkUpdate: false,
     progress: "",
   }));
+
   const handleUpdate = action(async () => {
     try {
       runInAction(() => (meta.checkUpdate = true));
@@ -108,7 +110,7 @@ export default observer(() => {
               >
                 <Icon
                   size={20}
-                  color={Theme.UIColors.primary}
+                  color={Theme.colors.primary}
                   {...item.icon}
                 ></Icon>
                 <Text

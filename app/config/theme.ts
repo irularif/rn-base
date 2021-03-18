@@ -1,10 +1,9 @@
-import Fonts from "libs/assets/fonts";
 import { ITheme } from "libs/config/theme";
 
 export const DefaultTheme: Partial<ITheme> = {
   colors: {
-    primary: "#2A824F",
-    secondary: "#39AC6A",
+    primary: "#23A9CC",
+    secondary: "#23A9CC",
     background: "#f3f3f3",
     card: "#ffffff",
     text: "#333333",
@@ -15,7 +14,7 @@ export const DefaultTheme: Partial<ITheme> = {
   },
   statusBar: {
     barStyle: "light-content",
-    backgroundColor: "#2A824F",
+    backgroundColor: "#23A9CC",
   },
   shadow: {
     shadowColor: "#000",

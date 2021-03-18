@@ -4,7 +4,7 @@ import {
   useRoute,
 } from "@react-navigation/native";
 import DashboardStore from "app/model/dashboard";
-import Header from "app/ui/dashboard/Header";
+import Header from "app/pages/Dashboard/Header";
 import { ScrollView, View } from "libs/ui";
 import { statusBarHeight } from "libs/ui/Screen";
 import { observer } from "mobx-react";

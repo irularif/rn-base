@@ -49,7 +49,13 @@ public class MainApplication extends Application implements ReactApplication {
             new ModuleRegistryAdapter(mModuleRegistryProvider)
           );
           packages.addAll(unimodules);
-          
+
+          // Add codepush
+          // List<ReactPackage> cdp = Arrays.<ReactPackage>asList(
+          //   new CodePush(BuildConfig.CODEPUSH_KEY, MainApplication.this, BuildConfig.DEBUG)
+          // );
+          // packages.addAll(cdp);
+
           return packages;
         }
 
